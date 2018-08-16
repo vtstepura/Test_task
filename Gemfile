@@ -17,12 +17,12 @@ gem 'sqlite3'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate', '~>3.0.7'
-gem 'rspec-rails', '~> 3.4'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'pry-rails'
-  gem 'capybara'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
