@@ -1,0 +1,21 @@
+<h1>Listing user</h1>
+<%= render 'shared/flash'%>
+<div class="search">
+  <%= form_tag(admin_users_path, method: :get) do %>
+    <%= text_field_tag :term, params[:term] %>
+      <%= select_tag :role, options_for_select([['admin', 'users'], ['user', 'users']]) %>
+      <%= submit_tag 'Search', name: nil %>
+  <% end %>
+</div>
+<table>
+  <tr>
+    <th>username</th>
+    <th>email</th>
+    <th>role</th>
+  </tr>
+
+  <%= render @users %>
+</table>
+<div class="paginate">
+  <%= will_paginate @users %>
+</div>

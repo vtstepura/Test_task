@@ -1,0 +1,18 @@
+<div class="login-page">
+  <div class="form">
+    <h1>Login</h1>
+    <%= render 'shared/flash'%>
+  <%= form_tag do %>
+    <p>
+      <%= label_tag :email %>
+      <%= text_field_tag :email %><br>
+    <p>
+      <%= label_tag :password %>
+      <%= password_field_tag :password%><br>
+    </p>
+    <button class = "login">Login</button>
+  <% end %>
+  <p>New user? <%= link_to "Sign up now!", 'users/new' %></p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.signup-page {
+  padding: 3% 0 0;
+}
+
+h1{
+  text-align: center;
+}
+.search{
+  width: 20%;
+  margin: 0 auto;
+  padding: 20px;
+}
+table{
+  margin-top: 10%;
+  width: 50%;
+   margin: auto;
+}
+td {
+  text-align:center;
+}
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color:#F2F2F2;
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px;
+
+}
+ .show a{
+  background: #04B4AE;
+}
+.edit a{
+  background: #D7DF01;
+}
+.destroy a{
+  background: #FF0000;
+}
+.paginate{
+  display: block;
+  width: 15%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.show-page{
+  padding: 10% 0 0;
+}

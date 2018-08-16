@@ -1,0 +1,35 @@
+<div class="signup-page">
+  <div class="form">
+    <h1>Sing up</h1>
+    <%= form_for(@user) do |f| %>
+      <% if @user.errors.any? %>
+        <h2> <%= pluralize(@user.errors.count, 'error') %> prohibited this user from being saved: </h2>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li> <%= msg %> </li>
+          <% end %>
+        </ul>
+      <% end %>
+      <p>
+        <%= f.label :username, placeholder: "enter your username"%>
+        <%= f.text_field :username, placeholder: "enter your name" %><br>
+      </p>
+      <p>
+        <%= f.label :email %>
+        <%= f.text_field :email, placeholder: "enter your email"%><br>
+      </p>
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "create a password" %><br>
+      </p>
+      <p>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, placeholder: "repeat a password" %><br>
+      </p>
+      <p>
+        <%= f.label :role %>
+        <%= f.check_box :role, {}, :admin, :user %><br>
+      </p>
+    <button class="login">Create my account</button>
+    <% end %>
+  </div>
+</div>
