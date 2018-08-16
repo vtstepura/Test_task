@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorize, only: %i[new create]
-  def index; end
+  skip_before_action :authorize
 
   def new
     @user = User.new
@@ -10,14 +9,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     @user.save ? (redirect_to users_url) : (render 'new')
-  end
-
-  def edit
-    @user = User.find(params[:id])
-  end
-
-  def update
-    @user.update(user_params) ? (redirect_to users_url) : (render 'edit')
   end
 
   private
