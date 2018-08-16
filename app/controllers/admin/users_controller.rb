@@ -5,7 +5,8 @@ module Admin
     end
 
     def index
-      @users = User.search(params[:term]).paginate(page: params[:page], per_page: 3)
+      @users = User.send(params[:role] || 'all').search(params[:term])
+        .paginate(page: params[:page], per_page: 3)
     end
 
     def show

@@ -1,12 +1,13 @@
-<h1>Listing user</h1>
-<%= render 'shared/flash'%>
+<h1>Users list</h1>
+
 <div class="search">
   <%= form_tag(admin_users_path, method: :get) do %>
     <%= text_field_tag :term, params[:term] %>
-      <%= select_tag :role, options_for_select([['admin', 'users'], ['user', 'users']]) %>
-      <%= submit_tag 'Search', name: nil %>
+    <%= select_tag :role, options_for_select( [['All', 'all']] + User.roles.keys.map { |r| [r.titleize, r]}, params[:role]) %>
+    <%= submit_tag 'Search', name: nil %>
   <% end %>
 </div>
+
 <table>
   <tr>
     <th>username</th>
