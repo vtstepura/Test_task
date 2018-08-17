@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    @user.save ? (redirect_to users_url) : (render 'new')
+    @user.save ? (redirect_to login_path) : (render 'new')
   end
 
   private
