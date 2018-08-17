@@ -1,12 +1,9 @@
 module Admin
   class UsersController < Admin::BaseController
-    def new
-      @user = User.new
-    end
 
     def index
       @users = User.send(params[:role] || 'all').search(params[:term])
-        .paginate(page: params[:page], per_page: 3)
+        .paginate(page: params[:page], per_page: 10)
     end
 
     def show
