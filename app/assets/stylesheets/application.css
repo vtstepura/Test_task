@@ -18,6 +18,7 @@ nav{
   background: #424242;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  margin-bottom: 10px;
 }
 ul{
   display: block;
@@ -39,15 +40,22 @@ li a{
   color: #E6E6E6;
 }
 .error{
+  position: absolute;
   background: #FA5858;
   padding: 10px 0px 10px 0px;
   border-radius: 5px;
+  text-align: center;
+  width: auto;
+  right: 10px;
+  padding: 10px;
 }
 .success{
+  position: absolute;
   background: #088A29;
   padding: 10px 0px 10px 0px;
   border-radius: 5px;
   text-align: center;
-  width: 30%;
-  margin: 0 auto;
+  width: auto;
+  right: 10px;
+  padding: 10px;
 }

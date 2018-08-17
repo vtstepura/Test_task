@@ -9,9 +9,10 @@ h1{
   text-align: center;
 }
 .search{
-  width: 20%;
+  width: auto;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 table{
   margin-top: 10%;
@@ -40,10 +41,46 @@ a{
 }
 .paginate{
   display: block;
-  width: 15%;
+  width: auto;
   margin: 0 auto;
   padding-top: 20px;
+  text-align: center;
+}
+.paginate a{
+  color: #000000;
 }
 .show-page{
   padding: 10% 0 0;
+}
+.error-for-singup{
+}
+.error-for-singup ul{
+  margin-bottom: 100px;
+  height: 30%;
+}
+.error-for-singup li{
+  position: relative;
+  color: red;
+  float: left;
+  list-style-type: disc;
+}
+.errors-list{
+  border: 2px solid #FE2E2E;
+  background: #F78181;
+  color:#FE2E2E;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px 0px 10px 0px;
+}
+.button-back a{
+  color: #585858;
+  border: 2px solid #585858;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px ;
+  width: 20%;
+  margin: 0 auto;
+}
+.button-back a:hover{
+  background: #585858;
+  color: #FFFFFF;
 }
