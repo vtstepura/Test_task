@@ -55,14 +55,14 @@ a{
 .error-for-singup{
 }
 .error-for-singup ul{
-  margin-bottom: 100px;
-  height: 30%;
+  text-align: left;
 }
 .error-for-singup li{
   position: relative;
   color: red;
-  float: left;
   list-style-type: disc;
+  padding: 0px;
+  float: none;
 }
 .errors-list{
   border: 2px solid #FE2E2E;
