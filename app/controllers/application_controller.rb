@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def authorize
-    flash[:error] = 'Please authorize'
     redirect_to login_path unless current_user
   end
 end
