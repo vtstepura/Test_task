@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:success] = 'Successfully logged in!'
-      redirect_to(user.admin? ? admin_users_path : users_path)
+      redirect_to(user.admin? ? admin_users_path : root_path)
     else
       redirect_to login_path, error: 'Check your email and password.'
     end
