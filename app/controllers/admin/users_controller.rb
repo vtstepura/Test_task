@@ -23,8 +23,8 @@ module Admin
     end
 
     def destroy
-      user.destroy
-      redirect_to admin_users_path, success: 'User was deleted!'
+        flash.now[:success] = 'User was deleted!'
+        user.destroy
     end
 
     private
