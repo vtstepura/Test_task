@@ -1,4 +1,4 @@
-<h1>Users list</h1>
+<h1>Users Dashboars</h1>
 <div id="index_page">
   <div class="search">
     <%= form_tag(admin_users_path, method: :get, remote: true) do %>
@@ -19,8 +19,8 @@
     <tbody id='users'>
       <%= render @users %>
     </tbody>
+    <div id= "paginate" class="paginate">
+      <%= will_paginate @users, remote: true%>
+    </div>
   </table>
-  <div class="paginate">
-    <%= will_paginate @users %>
-  </div>
 </div>
